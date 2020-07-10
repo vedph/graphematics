@@ -1,2 +1,2 @@
-# graphematics
-Ontology for concepts related with graphemes and writing systems
+# Graphematics
+Ontology for concepts related with graphemes and writing systems.
