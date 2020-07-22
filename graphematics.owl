@@ -6,7 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="urn:absolute:graphematics.vedph.it/graphematics"/>
+    <owl:Ontology rdf:about="https://graphematics.vedph.it/graphematics"/>
     
 
 
@@ -21,9 +21,9 @@
     
 
 
-    <!-- urn:absolute:graphematics.vedph.it/graphematics#Grapheme -->
+    <!-- https://graphematics.vedph.it/graphematics#Grapheme -->
 
-    <owl:Class rdf:about="urn:absolute:graphematics.vedph.it/graphematics#Grapheme">
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Grapheme">
         <rdfs:comment xml:lang="en">A minimal distinctive unit of a writing system</rdfs:comment>
         <rdfs:label xml:lang="en">Grapheme</rdfs:label>
     </owl:Class>
