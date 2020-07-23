@@ -21,11 +21,104 @@
     
 
 
+    <!-- https://graphematics.vedph.it/graphematics#Abbreviation -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation"/>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Abbreviation_mark -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation_mark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Allograph -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Allograph">
+        <rdfs:comment>Graphic model for glyphs. One or many allographs may represent a Grapheme</rdfs:comment>
+        <rdfs:label>Allograph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Alphabeme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabeme">
+        <rdfs:comment>Minimal distinctive unit of an alphabet. It does not have a shape model and may be represented by a grapheme, by a sign of the Morse code, by a sequence of phonemes, by a sign in the deaf sign language etc. It relationship with the Phoneme is complex and variable.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Alphabetic_grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabetic_grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Brevigraph -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Brevigraph">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Diacritic -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Diacritic">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    </owl:Class>
+    
+
+
     <!-- https://graphematics.vedph.it/graphematics#Grapheme -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Grapheme">
-        <rdfs:comment xml:lang="en">A minimal distinctive unit of a writing system</rdfs:comment>
+        <rdfs:comment xml:lang="en">The minimal distinctive unit of a writing system. It means one or more alphabemes (more than one, in the case of brevigraphs)</rdfs:comment>
         <rdfs:label xml:lang="en">Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Legature -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Legature"/>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Logograph -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Logograph">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Metamark -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Metamark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Punctuation_mark -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_mark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Space -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Space">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
     </owl:Class>
 </rdf:RDF>
 
