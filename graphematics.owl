@@ -77,7 +77,6 @@ Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabem
 Problematic aspect: some Alphabetic Graphemes (that I would call &apos;Combining Alphabetic Graphemes&apos;) can be put above or below another Alphabetic Grapheme, or &apos;Base Alphabetic Grapheme&apos; (e.g. a small &apos;o&apos; over an &apos;u&apos; or, in Greek, a small iota under an omega), thus being used as abbreviations. The same happens today in superscript such as 1st or 2nd in English, or 1° in Italian (for &apos;primo&apos;).
 
 Properties:
-
 {+linguistic}
 {+intraverbal}
 {+alphabetic}
@@ -86,7 +85,9 @@ Base Alphabetic Graphemes also have properties:
 {-combining}
 
 Combining Alphabetic Graphemes also have properties:
-{+combining}</rdfs:comment>
+{+combining}
+
+Examples include: &apos;a&apos;, &apos;b&apos;, &apos;c&apos;... for graphemes referring to alphabemes of the Latin alphabet; alpha, beta, gamma... for those referring to the Greek alphabet.</rdfs:comment>
     </owl:Class>
     
 
@@ -95,9 +96,22 @@ Combining Alphabetic Graphemes also have properties:
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Brevigraph">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
-        <rdfs:comment>Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+        <rdfs:comment>One Grapheme meaning more than one Alphabeme.
 
-Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.</rdfs:comment>
+Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
+
+Properties:
+{+linguistic}
+{+intraverbal}
+{+alphabetic}
+{-has_a_1:1_standard_alphabetic_meaning}
+{-combining}
+
+Examples include: p with horizontal trait for Latin &quot;per&quot;, q with horizontal trait for lat. &quot;qui&quot; etc.
+
+Problematic aspect: brevigraphs mostly derive from original graphemes (&apos;p&apos;, &apos;q&apos;, &apos;e&apos; etc.) with modifications. In some cases, such as the &apos;e caudatum&apos; (originating from a ligature between &apos;a&apos; and &apos;e&apos;) or the &apos;4-shaped&apos; abbreviation for final &apos;-rum&apos; in Latin (bonorum etc.), the original graphemes have fused in such a manner that one would hardly distinguish them any more. In other cases, instead, the original traits are easily distinguishable, so one could analyze &apos;p with horizontal trait&apos; as two distinct graphemes, &apos;p&apos; and &apos;horizontal trait&apos;. This relates to the very issue of the definition of grapheme as &apos;minimal&apos; unit.</rdfs:comment>
     </owl:Class>
     
 
@@ -114,7 +128,13 @@ Properties:
 {-alphabetic}
 {+combining}
 
-Examples include: accent, macron meaning long vowel.</rdfs:comment>
+Examples include: accent, macron meaning long vowel.
+
+Its distinction with textual graphemes, and possibly also with abbreviation marks, may be blurred in practice.
+
+A diacritic dffers from graphemes having +{alphabetic} such as the abbreviation mark because, for instance, we do not consider the &apos;o&apos; in Italian words &apos;pero&apos; and &apos;però&apos; as distinct alphabemes, while the alphabeme sequences in &apos;lacu&apos; (ablative) and &apos;lacū&apos; (abbreviation for accusative &apos;lacum&apos;) do differ because of the macron (abbreviation mark).
+
+The main distinction between a diacritic and a textual graphemes is that a diacritic is considered as part of one word, referring to the whole word or to individual graphemes within it, while a textual grapheme like a comma does not refer to one word, but has function to a number of words, and in principle has function to the whole text.</rdfs:comment>
     </owl:Class>
     
 
