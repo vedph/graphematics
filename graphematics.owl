@@ -31,6 +31,20 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation_Mark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:comment>Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
+
+Properties:
+{+linguistic}
+{+intraverbal}
+{+alphabetic}
+{-has_a_1:1_standard_alphabetic_meaning}
+{+combining}
+
+Examples: macron, semicolon, dot and other graphemes written to mark an abbreviation.
+
+Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &apos;misericordia&apos;), the four grahemes &apos;m&apos;, &apos;i&apos;, &apos;a&apos; and macron (which can span over the whole graphical word or over a part of it), combined, have function to the alphabemes &apos;m&apos;, &apos;i&apos;, &apos;s&apos;, &apos;e&apos; etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -56,6 +70,23 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:comment>Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
+
+Problematic aspect: some Alphabetic Graphemes (that I would call &apos;Combining Alphabetic Graphemes&apos;) can be put above or below another Alphabetic Grapheme, or &apos;Base Alphabetic Grapheme&apos; (e.g. a small &apos;o&apos; over an &apos;u&apos; or, in Greek, a small iota under an omega), thus being used as abbreviations. The same happens today in superscript such as 1st or 2nd in English, or 1° in Italian (for &apos;primo&apos;).
+
+Properties:
+
+{+linguistic}
+{+intraverbal}
+{+alphabetic}
+
+Base Alphabetic Graphemes also have properties:
+{-combining}
+
+Combining Alphabetic Graphemes also have properties:
+{+combining}</rdfs:comment>
     </owl:Class>
     
 
@@ -64,6 +95,9 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Brevigraph">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:comment>Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.</rdfs:comment>
     </owl:Class>
     
 
@@ -72,6 +106,15 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Diacritic">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:comment>Property -{alphabetic}, i.e. doesn&apos;t have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Properties:
+{+linguistic}
+{+intraverbal}
+{-alphabetic}
+{+combining}
+
+Examples include: accent, macron meaning long vowel.</rdfs:comment>
     </owl:Class>
     
 
@@ -80,7 +123,7 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
-        <rdfs:comment>A Grapheme meaning a word or a part of it.</rdfs:comment>
+        <rdfs:comment>A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
     </owl:Class>
     
 
@@ -88,7 +131,7 @@
     <!-- https://graphematics.vedph.it/graphematics#Grapheme -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Grapheme">
-        <rdfs:comment xml:lang="en">The minimal distinctive unit of a writing system. It means one or more alphabemes (more than one, in the case of brevigraphs)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The minimal distinctive unit of a writing system. It means one or more alphabemes (more than one, in the case of brevigraphs).</rdfs:comment>
         <rdfs:label xml:lang="en">Grapheme</rdfs:label>
     </owl:Class>
     
@@ -98,6 +141,7 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
+        <rdfs:comment>A grapheme that is part of a word (or morpheme). These graphemes correspond to the second articulation of language. Though they normally belong to &apos;phonographic&apos; writing systems (G. Sampson, Writing Systems, pp. 39-45 distinguishes three kinds of phonographic systems: syllabic, segmental and featural), I want to hightlight that one intraverbal grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. There relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include diacritics, abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
     </owl:Class>
     
 
@@ -112,7 +156,7 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Logograph">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
-        <rdfs:comment>A Grapheme meaning a whole word or a morpheme. See G. Sampson, Writing Systems, pp. 38-39. It is worth quoting from page 39: &quot;[...] one might imagine a logographic script for English in which, say, the words walk, walked, walking were represented by three distinct and unrelted graphs, rather than being split into their constituent morphemes [...]. In reality, though, I know of no logographic systems based on units larger than single morphemes&quot;. Bear in mind that word roots (e.g. &quot;dog&quot;) also are &quot;morphemes&quot;.</rdfs:comment>
+        <rdfs:comment>A Grapheme meaning a whole word or a morpheme. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39. It is worth quoting from page 39: &quot;[...] one might imagine a logographic script for English in which, say, the words walk, walked, walking were represented by three distinct and unrelted graphs, rather than being split into their constituent morphemes [...]. In reality, though, I know of no logographic systems based on units larger than single morphemes&quot;. Bear in mind that word roots (e.g. &quot;dog&quot;) also are &quot;morphemes&quot;.</rdfs:comment>
     </owl:Class>
     
 
@@ -139,7 +183,7 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Semasiographic_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
-        <rdfs:comment>A Grapheme meaning an idea, not a word. This terminology is taken from G. Sampson, Writing Systems, pp. 28-32. This is commonly called Ideogram. Examples include numbers and Chinese characters.</rdfs:comment>
+        <rdfs:comment>A Grapheme meaning an idea, not a word. The name and the concept are taken from G. Sampson, Writing Systems, pp. 28-38. This covers the concept sometimes called ideogram or pictogram. Examples include numbers and Chinese characters.</rdfs:comment>
     </owl:Class>
     
 
