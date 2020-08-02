@@ -130,6 +130,7 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Metamark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+        <rdfs:comment>This class includes textual graphemes that do not qualify as space or punctuation, such as an asterisk pointing to a footnote, a mark in a manuscript pointing to an interlinear or a marginal addition. This class might be eliminated in future versions of the ontology, since it mostly represents &apos;other textual graphemes&apos; (not being space or proper punctuation). However, such metamarks have specific markup conventions in TEI.</rdfs:comment>
     </owl:Class>
     
 
@@ -138,6 +139,7 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_Mark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+        <rdfs:comment>Examples include comma, full stop, question mark, quotes. Especially in pre-modern writing systems, the status of some textual graphemes (such as asterisks or the obelos in ancient Greek papyri) is controversial: some would call them punctuation, some not. So the distinction between current classes &quot;Punctuation Mark&quot; and &quot;Metamark&quot; is blurred in practice. In other words, punctuation has been standardized for Western writing systems only in the contemporary age, and its status in other writing systems is still problematic.</rdfs:comment>
     </owl:Class>
     
 
@@ -155,6 +157,7 @@
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Space">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+        <rdfs:comment>Examples include &apos;white&apos; space between graphical words and other uses of space to arrange marks on the page, such as line breaks. In a written document produced with ink &quot;Space&quot; is not produced directly by adding ink, but instead by arranging other marks in a specific way, so one could argue that &quot;Space&quot; is not a subclass of &quot;Mark&quot;, but I would still argue that it is a subclass of &quot;Grapheme&quot; because it has distinctive value. Its status is therefore quite unique and problematic.</rdfs:comment>
     </owl:Class>
     
 
