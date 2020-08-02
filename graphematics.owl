@@ -108,20 +108,11 @@
     
 
 
-    <!-- https://graphematics.vedph.it/graphematics#Linguistic_Grapheme -->
-
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Linguistic_Grapheme">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
-        <rdfs:comment>A Grapheme meaning a word or a part of it</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://graphematics.vedph.it/graphematics#Logograph -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Logograph">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
-        <rdfs:comment>A Grapheme meaning a whole word or a morpheme. G. Sampson, Writing Systems, p.</rdfs:comment>
+        <rdfs:comment>A Grapheme meaning a whole word or a morpheme. See G. Sampson, Writing Systems, pp. 38-39. It is worth quoting from page 39: &quot;[...] one might imagine a logographic script for English in which, say, the words walk, walked, walking were represented by three distinct and unrelted graphs, rather than being split into their constituent morphemes [...]. In reality, though, I know of no logographic systems based on units larger than single morphemes&quot;. Bear in mind that word roots (e.g. &quot;dog&quot;) also are &quot;morphemes&quot;.</rdfs:comment>
     </owl:Class>
     
 
