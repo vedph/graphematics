@@ -27,10 +27,10 @@
     
 
 
-    <!-- https://graphematics.vedph.it/graphematics#Abbreviation_mark -->
+    <!-- https://graphematics.vedph.it/graphematics#Abbreviation_Mark -->
 
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation_mark">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation_Mark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
     </owl:Class>
     
 
@@ -52,10 +52,10 @@
     
 
 
-    <!-- https://graphematics.vedph.it/graphematics#Alphabetic_grapheme -->
+    <!-- https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme -->
 
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabetic_grapheme">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
     </owl:Class>
     
 
@@ -63,7 +63,7 @@
     <!-- https://graphematics.vedph.it/graphematics#Brevigraph -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Brevigraph">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
     </owl:Class>
     
 
@@ -71,7 +71,16 @@
     <!-- https://graphematics.vedph.it/graphematics#Diacritic -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Diacritic">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Glottographic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+        <rdfs:comment>A Grapheme meaning a word or a part of it.</rdfs:comment>
     </owl:Class>
     
 
@@ -85,16 +94,34 @@
     
 
 
+    <!-- https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
+    </owl:Class>
+    
+
+
     <!-- https://graphematics.vedph.it/graphematics#Legature -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Legature"/>
     
 
 
+    <!-- https://graphematics.vedph.it/graphematics#Linguistic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Linguistic_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
+        <rdfs:comment>A Grapheme meaning a word or a part of it</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://graphematics.vedph.it/graphematics#Logograph -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Logograph">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
+        <rdfs:comment>A Grapheme meaning a whole word or a morpheme. G. Sampson, Writing Systems, p.</rdfs:comment>
     </owl:Class>
     
 
@@ -102,15 +129,24 @@
     <!-- https://graphematics.vedph.it/graphematics#Metamark -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Metamark">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
     </owl:Class>
     
 
 
-    <!-- https://graphematics.vedph.it/graphematics#Punctuation_mark -->
+    <!-- https://graphematics.vedph.it/graphematics#Punctuation_Mark -->
 
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_mark">
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_Mark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Semasiographic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Semasiographic_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+        <rdfs:comment>A Grapheme meaning an idea, not a word. This terminology is taken from G. Sampson, Writing Systems, pp. 28-32. This is commonly called Ideogram. Examples include numbers and Chinese characters.</rdfs:comment>
     </owl:Class>
     
 
@@ -118,7 +154,16 @@
     <!-- https://graphematics.vedph.it/graphematics#Space -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Space">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Textual_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Textual_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Grapheme"/>
+        <rdfs:comment>A Grapheme used as a metalanguage providing a meaningful syntax for other graphemes in the text. It does not distinguish between different words but between different texts.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
