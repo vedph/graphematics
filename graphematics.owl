@@ -8,11 +8,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://graphematics.vedph.it/graphematics">
-        <rdfs:comment>Ontology for concepts pertaining graphemes and writing systems.
+        <rdfs:comment xml:lang="en">Ontology for concepts pertaining to graphemes and writing systems, oriented to philology.
 
 This is work in progress: it is being actively developed as of summer 2020.
 
-Three closely related ontologies, to which my own ontology will eventually be intertwined, are
+Three closely related ontologies, to which this ontology will eventually be intertwined, are
 - Peter Stokes, [The Archetype Ontology](https://github.com/pastokes/archetype-ontology)
 - [CRMtex](http://www.cidoc-crm.org/crmtex/sites/default/files/CRMtex_v1.0_March_2020.pdf)
 - Frekerike Neuber, [typoo](https://github.com/FrederikeNeuber/typoo/)</rdfs:comment>
