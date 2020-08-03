@@ -12,8 +12,9 @@
 
 This is work in progress: it is being actively developed as of summer 2020.
 
-Two closely related ontologies, to which my own ontology will eventually be intertwined, are
+Three closely related ontologies, to which my own ontology will eventually be intertwined, are
 - Peter Stokes, [The Archetype Ontology](https://github.com/pastokes/archetype-ontology)
+- [CRMtex](http://www.cidoc-crm.org/crmtex/sites/default/files/CRMtex_v1.0_March_2020.pdf)
 - Frekerike Neuber, [typoo](https://github.com/FrederikeNeuber/typoo/)</rdfs:comment>
         <rdfs:label>VeDPH Graphematics Ontology</rdfs:label>
     </owl:Ontology>
@@ -40,11 +41,80 @@ Two closely related ontologies, to which my own ontology will eventually be inte
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/P138_represents -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138_represents"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P138i_is_represented_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138i_is_represented_by"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://archetype.ink/current/arch_Allograph -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Allograph">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E37_Mark"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P138_represents"/>
+                <owl:someValuesFrom rdf:resource="http://archetype.ink/current/arch_Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P138i_is_represented_by"/>
+                <owl:someValuesFrom rdf:resource="http://archetype.ink/current/arch_Idiograph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-9060-9340"/>
+        <rdfs:comment xml:lang="en">Scope note:
+         This class comprises different forms of an arch Character that are recognized at some level as distinctive at least by writers and, at some level, also by readers. This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of an inscription, but the underlying prototype.
+
+         Examples:
+         - Roman a and italic a are two distinct allographs.
+         - In Greek, allographs of the letter sigma include initial and medial σ, final ς, and the lunate form.</rdfs:comment>
+        <rdfs:label xml:lang="en">arch Allograph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://archetype.ink/current/arch_Character -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Character"/>
+    
+
+
+    <!-- http://archetype.ink/current/arch_Idiograph -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Idiograph"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E37_Mark -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E37_Mark"/>
     
 
 
@@ -84,15 +154,6 @@ Properties:
 Examples: macron, semicolon, dot and other graphemes written to mark an abbreviation.
 
 Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &apos;misericordia&apos;), the four grahemes &apos;m&apos;, &apos;i&apos;, &apos;a&apos; and macron (which can span over the whole graphical word or over a part of it), combined, have function to the alphabemes &apos;m&apos;, &apos;i&apos;, &apos;s&apos;, &apos;e&apos; etc.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://graphematics.vedph.it/graphematics#Allograph -->
-
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Allograph">
-        <rdfs:comment>Graphic model for glyphs. One or many allographs may represent a Grapheme</rdfs:comment>
-        <rdfs:label>Allograph</rdfs:label>
     </owl:Class>
     
 
@@ -183,16 +244,6 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment>A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://graphematics.vedph.it/graphematics#Grapheme -->
-
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Grapheme">
-        <dc:creator rdf:resource="https://orcid.org/0000-0002-2675-9184"/>
-        <rdfs:comment xml:lang="en">The minimal distinctive unit of a writing system. It means one or more alphabemes (more than one, in the case of brevigraphs).</rdfs:comment>
-        <rdfs:label xml:lang="en">Grapheme</rdfs:label>
     </owl:Class>
     
 
