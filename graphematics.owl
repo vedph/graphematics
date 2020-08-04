@@ -53,7 +53,9 @@ Three closely related ontologies, to which this ontology will eventually be inte
 
     <!-- http://erlangen-crm.org/current/P138_represents -->
 
-    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138_represents"/>
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138_represents">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P138i_is_represented_by"/>
+    </owl:ObjectProperty>
     
 
 
@@ -65,7 +67,9 @@ Three closely related ontologies, to which this ontology will eventually be inte
 
     <!-- http://erlangen-crm.org/current/P65i_is_shown_by -->
 
-    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P65i_is_shown_by"/>
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P65i_is_shown_by">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item"/>
+    </owl:ObjectProperty>
     
 
 
@@ -75,9 +79,17 @@ Three closely related ontologies, to which this ontology will eventually be inte
     
 
 
-    <!-- http://erlangen-crm.org/current/E1_CRM_Entity#is_signifier_of -->
+    <!-- https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning -->
 
-    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity#is_signifier_of"/>
+    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning">
+        <owl:inverseOf rdf:resource="https://graphematics.vedph.it/graphematics#VeDPH_is_standard_alphabetic_meaning_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#VeDPH_is_standard_alphabetic_meaning_of -->
+
+    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#VeDPH_is_standard_alphabetic_meaning_of"/>
     
 
 
@@ -124,6 +136,11 @@ Three closely related ontologies, to which this ontology will eventually be inte
                 <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Allograph"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The definition of &apos;crm:P62 depicts&apos; says: &quot;This property is a shortcut of the more fully developed path from E24 Physical Human-Made Thing through P65 shows visual item, E36 Visual Item, P138 represents, E1 CRM Entity&quot;.
+
+CRMtex asserts that TX9 Glyph, P62 depicts, TX8 Grapheme. This is equivalent to TX9 Glyph (a E24 Physical Human-Made Thing), P65 shows visual item, something unspecified (a E36 Visual Item), P138 represents, TX8 Grapheme (a E1 CRM Entity). Here one position in the chain (the E46 Visual Item) is unspecified.
+
+So when this ontology asserts that TX9 Glyph (a E24 Physical Human-Made Thing), P65 shows visual item, VeDPH_Allograph (a E37 Mark, which is a E36 Visual Item), P138 represents, TX8 Grapheme (a E1 CRM Entity)&quot;, this ontology is not contradicting CRMtex but integrating it, by adding VeDPH_Allograph in the empty position in the chain (the E46 Visual Item).</rdfs:comment>
     </owl:Class>
     
 
@@ -140,7 +157,7 @@ Three closely related ontologies, to which this ontology will eventually be inte
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation_Mark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
-        <rdfs:comment>Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+        <rdfs:comment xml:lang="en">Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
 Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
 
@@ -148,7 +165,7 @@ Properties:
 {+linguistic}
 {+intraverbal}
 {+alphabetic}
-{-has_a_1:1_standard_alphabetic_meaning}
+{-has_a_1_to_1_standard_alphabetic_meaning}
 {+combining}
 
 Examples: macron, semicolon, dot and other graphemes written to mark an abbreviation.
@@ -162,6 +179,18 @@ Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &ap
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Allograph">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E37_Mark"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P138_represents"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A VeDPH Allograph is a CRM &apos;E37 Mark&apos;, which in its turn is a CRM &apos;E36 Visual Item&apos;.  The definition of crm:E37 says that &quot;Instances of E37 Mark do not represent the actual image of a mark, but the abstract ideal&quot;. Likewise, the definition of crm:E36 says that &quot; This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of a visual item, but the underlying prototype&quot;. A VeDPH Allograph is the abstract form, the visual model, which scribes have in mind when drawing (and readers have in mind when recognizing) individual TX9 Glyphs. No two TX9 Glyphs are identical, but all TX9 Glyphs that P65_shows_visual_item the same VeDPH Allograph are modelled on the same abstract form, that of the VeDPH Allograph.
+
+It is important to note that while both a TX9 Glyph and a VeDPH Allograph are &apos;visual&apos; in that they have a form, a shape (a Glyph has a specific, unique shape, an Allograph is an abstract model), in this ontology a TX8 Grapheme does not have a shape. For example, while VeDPH Allograph &apos;ſ&apos; (long s) has an oblong shape with a hook at its top and the shape of VeDPH Allograph &apos;s&apos; (short s) is characterized by two curves, TX8 Grapheme &apos;s&apos; does not have any shape. If it did, what would it be: the oblong one or the double-curve one?
+
+Open issue: strictly speaking, the term &apos;Allograph&apos; should only be used when in a writing system more than one abstract visual form exist for a grapheme (like the ſ/s example above). However, in this ontology the term is also used to refer to the abstract model of TX9 Glyphs in the case in which in a writing system only one allograph exists for a grapheme. This clashes with the etymological meaning of morpheme &apos;allo-&apos; (other) in the class name &apos;VeDPH Allograph&apos;. An alternative name for this class would have been &apos;Graph&quot;, as suggested privately both by Raul Mordenti and Frederike Neuber.</rdfs:comment>
         <rdfs:label xml:lang="en">VeDPH Allograph</rdfs:label>
     </owl:Class>
     
@@ -181,7 +210,14 @@ Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &ap
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
-        <rdfs:comment>Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Alphabeme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
 Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
 
@@ -207,7 +243,14 @@ Examples include: &apos;a&apos;, &apos;b&apos;, &apos;c&apos;... for graphemes r
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Brevigraph">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
-        <rdfs:comment>One Grapheme meaning more than one Alphabeme.
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Alphabeme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">One Grapheme meaning more than one Alphabeme.
 
 Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
@@ -217,7 +260,7 @@ Properties:
 {+linguistic}
 {+intraverbal}
 {+alphabetic}
-{-has_a_1:1_standard_alphabetic_meaning}
+{-has_a_1_to_1_standard_alphabetic_meaning}
 {-combining}
 
 Examples include: p with horizontal trait for Latin &quot;per&quot;, q with horizontal trait for lat. &quot;qui&quot; etc.
@@ -231,7 +274,7 @@ Problematic aspect: brevigraphs mostly derive from original graphemes (&apos;p&a
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Diacritic">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
-        <rdfs:comment>Property -{alphabetic}, i.e. doesn&apos;t have function to [Alphabeme]+ (1 or more [Alphabeme]).
+        <rdfs:comment xml:lang="en">Property -{alphabetic}, i.e. doesn&apos;t have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
 Properties:
 {+linguistic}
@@ -254,7 +297,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
-        <rdfs:comment>A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
         <rdfs:label xml:lang="en">VeDPH Glottographic Grapheme</rdfs:label>
     </owl:Class>
     
@@ -264,7 +307,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
-        <rdfs:comment>A grapheme that is part of a word (or morpheme). These graphemes correspond to the second articulation of language. Though they normally belong to &apos;phonographic&apos; writing systems (G. Sampson, Writing Systems, pp. 39-45 distinguishes three kinds of phonographic systems: syllabic, segmental and featural), I want to hightlight that one intraverbal grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. There relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include diacritics, abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A grapheme that is part of a word (or morpheme). These graphemes correspond to the second articulation of language. Though they normally belong to &apos;phonographic&apos; writing systems (G. Sampson, Writing Systems, pp. 39-45 distinguishes three kinds of phonographic systems: syllabic, segmental and featural), I want to hightlight that one intraverbal grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. There relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include diacritics, abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
         <rdfs:label xml:lang="en">VeDPH Intraverbal Grapheme</rdfs:label>
     </owl:Class>
     
