@@ -6,8 +6,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://graphematics.vedph.it/graphematics">
+        <owl:versionIRI rdf:resource="https://graphematics.vedph.it/graphematics/1.0.0"/>
         <rdfs:comment xml:lang="en">Ontology for concepts pertaining to graphemes and writing systems, oriented to philology.
 
 This is work in progress: it is being actively developed as of summer 2020.
@@ -61,6 +63,24 @@ Three closely related ontologies, to which this ontology will eventually be inte
     
 
 
+    <!-- http://erlangen-crm.org/current/P65i_is_shown_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P65i_is_shown_by"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E1_CRM_Entity#is_signifier_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity#is_signifier_of"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -72,67 +92,47 @@ Three closely related ontologies, to which this ontology will eventually be inte
     
 
 
-    <!-- http://archetype.ink/current/arch_Allograph -->
+    <!-- http://erlangen-crm.org/current/E37_Mark -->
 
-    <owl:Class rdf:about="http://archetype.ink/current/arch_Allograph">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E37_Mark"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P138_represents"/>
-                <owl:someValuesFrom rdf:resource="http://archetype.ink/current/arch_Character"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P138i_is_represented_by"/>
-                <owl:someValuesFrom rdf:resource="http://archetype.ink/current/arch_Idiograph"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:creator rdf:resource="http://orcid.org/0000-0002-9060-9340"/>
-        <rdfs:comment xml:lang="en">Scope note:
-         This class comprises different forms of an arch Character that are recognized at some level as distinctive at least by writers and, at some level, also by readers. This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of an inscription, but the underlying prototype.
-
-         Examples:
-         - Roman a and italic a are two distinct allographs.
-         - In Greek, allographs of the letter sigma include initial and medial σ, final ς, and the lunate form.</rdfs:comment>
-        <rdfs:label xml:lang="en">arch Allograph</rdfs:label>
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E37_Mark">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
     </owl:Class>
     
 
 
-    <!-- http://archetype.ink/current/arch_Character -->
+    <!-- http://erlangen-crm.org/current/E90_Symbolic_Object -->
 
-    <owl:Class rdf:about="http://archetype.ink/current/arch_Character"/>
-    
-
-
-    <!-- http://archetype.ink/current/arch_Idiograph -->
-
-    <owl:Class rdf:about="http://archetype.ink/current/arch_Idiograph"/>
-    
-
-
-    <!-- http://erlangen-crm.org/current/E37_Mark -->
-
-    <owl:Class rdf:about="http://erlangen-crm.org/current/E37_Mark"/>
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
     
 
 
     <!-- http://www.cidoc-crm.org/crmtex/TX8_Grapheme -->
 
-    <owl:Class rdf:about="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
+    <owl:Class rdf:about="http://www.cidoc-crm.org/crmtex/TX8_Grapheme">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+    </owl:Class>
     
 
 
     <!-- http://www.cidoc-crm.org/crmtex/TX9_Glyph -->
 
-    <owl:Class rdf:about="http://www.cidoc-crm.org/crmtex/TX9_Glyph"/>
+    <owl:Class rdf:about="http://www.cidoc-crm.org/crmtex/TX9_Glyph">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Allograph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
     <!-- https://graphematics.vedph.it/graphematics#Abbreviation -->
 
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation"/>
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation">
+        <rdfs:label xml:lang="en">VeDPH Abbreviation</rdfs:label>
+    </owl:Class>
     
 
 
@@ -158,10 +158,21 @@ Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &ap
     
 
 
+    <!-- https://graphematics.vedph.it/graphematics#Allograph -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Allograph">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E37_Mark"/>
+        <rdfs:label xml:lang="en">VeDPH Allograph</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://graphematics.vedph.it/graphematics#Alphabeme -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabeme">
-        <rdfs:comment>Minimal distinctive unit of an alphabet. It does not have a shape model and may be represented by a grapheme, by a sign of the Morse code, by a sequence of phonemes, by a sign in the deaf sign language etc. It relationship with the Phoneme is complex and variable.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdfs:comment>Minimal distinctive unit of an alphabet. It does not have a shape model and may be represented by a grapheme, by a signal of the Morse code, by a sequence of phonemes, by a sign in the deaf sign language etc. It relationship with the Phoneme is complex and variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Alphabeme</rdfs:label>
     </owl:Class>
     
 
@@ -244,6 +255,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment>A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Glottographic Grapheme</rdfs:label>
     </owl:Class>
     
 
@@ -253,13 +265,16 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
         <rdfs:comment>A grapheme that is part of a word (or morpheme). These graphemes correspond to the second articulation of language. Though they normally belong to &apos;phonographic&apos; writing systems (G. Sampson, Writing Systems, pp. 39-45 distinguishes three kinds of phonographic systems: syllabic, segmental and featural), I want to hightlight that one intraverbal grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. There relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include diacritics, abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Intraverbal Grapheme</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://graphematics.vedph.it/graphematics#Ligature -->
 
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Ligature"/>
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Ligature">
+        <rdfs:label xml:lang="en">VeDPH Ligature</rdfs:label>
+    </owl:Class>
     
 
 
@@ -268,6 +283,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Logograph">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
         <rdfs:comment>A Grapheme meaning a whole word or a morpheme. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39. It is worth quoting from page 39: &quot;[...] one might imagine a logographic script for English in which, say, the words walk, walked, walking were represented by three distinct and unrelted graphs, rather than being split into their constituent morphemes [...]. In reality, though, I know of no logographic systems based on units larger than single morphemes&quot;. Bear in mind that word roots (e.g. &quot;dog&quot;) also are &quot;morphemes&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Logograph</rdfs:label>
     </owl:Class>
     
 
@@ -277,6 +293,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Metamark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
         <rdfs:comment>This class includes textual graphemes that do not qualify as space or punctuation, such as an asterisk pointing to a footnote, a mark in a manuscript pointing to an interlinear or a marginal addition. This class might be eliminated in future versions of the ontology, since it mostly represents &apos;other textual graphemes&apos; (not being space or proper punctuation). However, such metamarks have specific markup conventions in TEI.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Metamark</rdfs:label>
     </owl:Class>
     
 
@@ -286,6 +303,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_Mark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
         <rdfs:comment>Examples include comma, full stop, question mark, quotes. Especially in pre-modern writing systems, the status of some textual graphemes (such as asterisks or the obelos in ancient Greek papyri) is controversial: some would call them punctuation, some not. So the distinction between current classes &quot;Punctuation Mark&quot; and &quot;Metamark&quot; is blurred in practice. In other words, punctuation has been standardized for Western writing systems only in the contemporary age, and its status in other writing systems is still problematic.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Punctuation Mark</rdfs:label>
     </owl:Class>
     
 
@@ -295,6 +313,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Semasiographic_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment>A Grapheme meaning an idea, not a word. The name and the concept are taken from G. Sampson, Writing Systems, pp. 28-38. This covers the concept sometimes called ideogram or pictogram. Examples include numbers and Chinese characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Semasiographic Grapheme</rdfs:label>
     </owl:Class>
     
 
@@ -304,6 +323,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Space">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
         <rdfs:comment>Examples include &apos;white&apos; space between graphical words and other uses of space to arrange marks on the page, such as line breaks. In a written document produced with ink &quot;Space&quot; is not produced directly by adding ink, but instead by arranging other marks in a specific way, so one could argue that &quot;Space&quot; is not a subclass of &quot;Mark&quot;, but I would still argue that it is a subclass of &quot;Grapheme&quot; because it has distinctive value. Its status is therefore quite unique and problematic.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Space</rdfs:label>
     </owl:Class>
     
 
@@ -313,6 +333,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Textual_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment>A Grapheme used as a metalanguage providing a meaningful syntax for other graphemes in the text. It does not distinguish between different words but between different texts.</rdfs:comment>
+        <rdfs:label xml:lang="en">VeDPH Textual Grapheme</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
