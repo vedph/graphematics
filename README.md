@@ -1,8 +1,8 @@
-# VeDPH Graphematics
+# POGO (Philology-Oriented Graphematics Ontology)
 
-VeDPH (Venice Centre for Digital and Publich Humanities) Graphematics ontology oriented towards philology based on documents created with pre-modern handwritten writing systems.
+Graphematics ontology oriented towards philology based on documents (such as European and Middle Eastern medieval manuscripts, inscriptions, papyri) created with pre-modern handwritten writing systems.
 
-This is **work in progress**: it is being actively developed as of summer 2020.
+This ontology is **work in progress**: it is being actively developed as of summer 2020 by [Paolo Monella](http://www1.unipa.it/paolo.monella/) at the [VeDPH](https://unive.it/vedph), Venice Centre for Digital and Publich Humanities, at the Ca' Foscari University of Venice, Italy.
 
 The ontology is anchored to concepts
 
