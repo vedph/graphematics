@@ -171,6 +171,7 @@ Properties:
 Examples: macron, semicolon, dot and other graphemes written to mark an abbreviation.
 
 Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &apos;misericordia&apos;), the four grahemes &apos;m&apos;, &apos;i&apos;, &apos;a&apos; and macron (which can span over the whole graphical word or over a part of it), combined, have function to the alphabemes &apos;m&apos;, &apos;i&apos;, &apos;s&apos;, &apos;e&apos; etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Abbreviation_Mark</rdfs:label>
     </owl:Class>
     
 
@@ -237,6 +238,7 @@ Combining Alphabetic Graphemes also have properties:
 {+combining}
 
 Examples include: &apos;a&apos;, &apos;b&apos;, &apos;c&apos;... for graphemes referring to alphabemes of the Latin alphabet; alpha, beta, gamma... for those referring to the Greek alphabet.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Alphabetic_Grapheme</rdfs:label>
     </owl:Class>
     
 
@@ -268,6 +270,7 @@ Properties:
 Examples include: p with horizontal trait for Latin &quot;per&quot;, q with horizontal trait for lat. &quot;qui&quot; etc.
 
 Problematic aspect: brevigraphs mostly derive from original graphemes (&apos;p&apos;, &apos;q&apos;, &apos;e&apos; etc.) with modifications. In some cases, such as the &apos;e caudatum&apos; (originating from a ligature between &apos;a&apos; and &apos;e&apos;) or the &apos;4-shaped&apos; abbreviation for final &apos;-rum&apos; in Latin (bonorum etc.), the original graphemes have fused in such a manner that one would hardly distinguish them any more. In other cases, instead, the original traits are easily distinguishable, so one could analyze &apos;p with horizontal trait&apos; as two distinct graphemes, &apos;p&apos; and &apos;horizontal trait&apos;. This relates to the very issue of the definition of grapheme as &apos;minimal&apos; unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Brevigraph</rdfs:label>
     </owl:Class>
     
 
@@ -291,6 +294,7 @@ Its distinction with textual graphemes, and possibly also with abbreviation mark
 A diacritic dffers from graphemes having +{alphabetic} such as the abbreviation mark because, for instance, we do not consider the &apos;o&apos; in Italian words &apos;pero&apos; and &apos;però&apos; as distinct alphabemes, while the alphabeme sequences in &apos;lacu&apos; (ablative) and &apos;lacū&apos; (abbreviation for accusative &apos;lacum&apos;) do differ because of the macron (abbreviation mark).
 
 The main distinction between a diacritic and a textual graphemes is that a diacritic is considered as part of one word, referring to the whole word or to individual graphemes within it, while a textual grapheme like a comma does not refer to one word, but has function to a number of words, and in principle has function to the whole text.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Diacritic</rdfs:label>
     </owl:Class>
     
 
