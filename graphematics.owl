@@ -18,7 +18,7 @@ Three closely related ontologies, to which this ontology will eventually be inte
 - Peter Stokes, [The Archetype Ontology](https://github.com/pastokes/archetype-ontology)
 - [CRMtex](http://www.cidoc-crm.org/crmtex/sites/default/files/CRMtex_v1.0_March_2020.pdf)
 - Frekerike Neuber, [typoo](https://github.com/FrederikeNeuber/typoo/)</rdfs:comment>
-        <rdfs:label>VeDPH Graphematics Ontology</rdfs:label>
+        <rdfs:label>POGO, Philology-oriented graphematics ontology</rdfs:label>
     </owl:Ontology>
     
 
@@ -79,17 +79,17 @@ Three closely related ontologies, to which this ontology will eventually be inte
     
 
 
-    <!-- https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning -->
+    <!-- https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning -->
 
-    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning">
-        <owl:inverseOf rdf:resource="https://graphematics.vedph.it/graphematics#VeDPH_is_standard_alphabetic_meaning_of"/>
+    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning">
+        <owl:inverseOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_is_standard_alphabetic_meaning_of"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://graphematics.vedph.it/graphematics#VeDPH_is_standard_alphabetic_meaning_of -->
+    <!-- https://graphematics.vedph.it/graphematics#POGO_is_standard_alphabetic_meaning_of -->
 
-    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#VeDPH_is_standard_alphabetic_meaning_of"/>
+    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#POGO_is_standard_alphabetic_meaning_of"/>
     
 
 
@@ -140,7 +140,7 @@ Three closely related ontologies, to which this ontology will eventually be inte
 
 CRMtex asserts that TX9 Glyph, P62 depicts, TX8 Grapheme. This is equivalent to TX9 Glyph (a E24 Physical Human-Made Thing), P65 shows visual item, something unspecified (a E36 Visual Item), P138 represents, TX8 Grapheme (a E1 CRM Entity). Here one position in the chain (the E46 Visual Item) is unspecified.
 
-So when this ontology asserts that TX9 Glyph (a E24 Physical Human-Made Thing), P65 shows visual item, VeDPH_Allograph (a E37 Mark, which is a E36 Visual Item), P138 represents, TX8 Grapheme (a E1 CRM Entity)&quot;, this ontology is not contradicting CRMtex but integrating it, by adding VeDPH_Allograph in the empty position in the chain (the E46 Visual Item).</rdfs:comment>
+So when this ontology asserts that TX9 Glyph (a E24 Physical Human-Made Thing), P65 shows visual item, POGO_Allograph (a E37 Mark, which is a E36 Visual Item), P138 represents, TX8 Grapheme (a E1 CRM Entity)&quot;, this ontology is not contradicting CRMtex but integrating it, by adding POGO_Allograph in the empty position in the chain (the E46 Visual Item).</rdfs:comment>
     </owl:Class>
     
 
@@ -148,7 +148,7 @@ So when this ontology asserts that TX9 Glyph (a E24 Physical Human-Made Thing), 
     <!-- https://graphematics.vedph.it/graphematics#Abbreviation -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation">
-        <rdfs:label xml:lang="en">VeDPH Abbreviation</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Abbreviation</rdfs:label>
     </owl:Class>
     
 
@@ -186,12 +186,14 @@ Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &ap
                 <owl:onClass rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A VeDPH Allograph is a CRM &apos;E37 Mark&apos;, which in its turn is a CRM &apos;E36 Visual Item&apos;.  The definition of crm:E37 says that &quot;Instances of E37 Mark do not represent the actual image of a mark, but the abstract ideal&quot;. Likewise, the definition of crm:E36 says that &quot; This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of a visual item, but the underlying prototype&quot;. A VeDPH Allograph is the abstract form, the visual model, which scribes have in mind when drawing (and readers have in mind when recognizing) individual TX9 Glyphs. No two TX9 Glyphs are identical, but all TX9 Glyphs that P65_shows_visual_item the same VeDPH Allograph are modelled on the same abstract form, that of the VeDPH Allograph.
+        <rdfs:comment xml:lang="en">A POGO_Allograph is a CRM &apos;E37 Mark&apos;, which in its turn is a CRM &apos;E36 Visual Item&apos;.  The definition of crm:E37 says that &quot;Instances of E37 Mark do not represent the actual image of a mark, but the abstract ideal&quot;. Likewise, the definition of crm:E36 says that &quot; This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of a visual item, but the underlying prototype&quot;. A POGO_Allograph is the abstract form, the visual model, which scribes have in mind when drawing (and readers have in mind when recognizing) individual TX9 Glyphs. No two TX9 Glyphs are identical, but all TX9 Glyphs that P65_shows_visual_item the same POGO_Allograph are modelled on the same abstract form, that of the POGO_Allograph.
 
-It is important to note that while both a TX9 Glyph and a VeDPH Allograph are &apos;visual&apos; in that they have a form, a shape (a Glyph has a specific, unique shape, an Allograph is an abstract model), in this ontology a TX8 Grapheme does not have a shape. For example, while VeDPH Allograph &apos;ſ&apos; (long s) has an oblong shape with a hook at its top and the shape of VeDPH Allograph &apos;s&apos; (short s) is characterized by two curves, TX8 Grapheme &apos;s&apos; does not have any shape. If it did, what would it be: the oblong one or the double-curve one?
+It is important to note that while both a TX9 Glyph and a POGO_Allograph are &apos;visual&apos; in that they have a form, a shape (a Glyph has a specific, unique shape, an Allograph is an abstract model), in this ontology a TX8 Grapheme does not have a shape. For example, while POGO_Allograph &apos;ſ&apos; (long s) has an oblong shape with a hook at its top and the shape of POGO_Allograph &apos;s&apos; (short s) is characterized by two curves, TX8 Grapheme &apos;s&apos; does not have any shape. If it did, what would it be: the oblong one or the double-curve one?
 
-Open issue: strictly speaking, the term &apos;Allograph&apos; should only be used when in a writing system more than one abstract visual form exist for a grapheme (like the ſ/s example above). However, in this ontology the term is also used to refer to the abstract model of TX9 Glyphs in the case in which in a writing system only one allograph exists for a grapheme. This clashes with the etymological meaning of morpheme &apos;allo-&apos; (other) in the class name &apos;VeDPH Allograph&apos;. An alternative name for this class would have been &apos;Graph&quot;, as suggested privately both by Raul Mordenti and Frederike Neuber.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Allograph</rdfs:label>
+The POGO ontology and Peter Stokes&apos; Archetype ontology have different perspective: POGO is oriented towards philology, so it considers concepts within one writing system, i.e. within each hand of each handwritten document; Archetype is oriented towards paleography, so it considers concepts across different hands. As a consequence, an Archetype_Idiograph also corresponds to a POGO_Allograph, if that is the only shape which that specific hand knows. In Archetype&apos;s perspective, there is such a thing as &apos;long s Archetype_allograph that is the same in different manuscript hands, and there is a specific Archetype_idiograph &apos;long s 1&apos; of that Archetype_allograph in hand &apos;a&apos; of manuscript &apos;A&apos; and a different Archetype_idiograph &apos;long s 2&apos; of that Archetype_allograph in hand &apos;b&apos; of manuscript &apos;B&apos;. For POGO instead, when editing manuscript A, one considers &apos;long s&apos; (shaped with the specific shape of &apos;long s 1&apos;) as a POGO_Allograph of POGO-Gapheme &apos;s&apos; within the writing system of hand &apos;a&apos; of manuscript &apos;A&apos;, and the same for the corresponding allograph in the writing system of hand &apos;b&apos; of manuscript &apos;B&apos;.
+
+Open issue: strictly speaking, the term &apos;Allograph&apos; should only be used when in a writing system more than one abstract visual form exist for a grapheme (like the ſ/s example above). However, in this ontology the term is also used to refer to the abstract model of TX9 Glyphs in the case in which in a writing system only one allograph exists for a grapheme. This clashes with the etymological meaning of morpheme &apos;allo-&apos; (other) in the class name POGO_Allograph. An alternative name for this class would have been &apos;Graph&quot;, as suggested privately both by Raul Mordenti and Frederike Neuber.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Allograph</rdfs:label>
     </owl:Class>
     
 
@@ -201,7 +203,7 @@ Open issue: strictly speaking, the term &apos;Allograph&apos; should only be use
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabeme">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:comment>Minimal distinctive unit of an alphabet. It does not have a shape model and may be represented by a grapheme, by a signal of the Morse code, by a sequence of phonemes, by a sign in the deaf sign language etc. It relationship with the Phoneme is complex and variable.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Alphabeme</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Alphabeme</rdfs:label>
     </owl:Class>
     
 
@@ -212,7 +214,7 @@ Open issue: strictly speaking, the term &apos;Allograph&apos; should only be use
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning"/>
+                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Alphabeme"/>
             </owl:Restriction>
@@ -245,7 +247,7 @@ Examples include: &apos;a&apos;, &apos;b&apos;, &apos;c&apos;... for graphemes r
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#VeDPH_has_standard_alphabetic_meaning"/>
+                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Alphabeme"/>
             </owl:Restriction>
@@ -298,7 +300,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment xml:lang="en">A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Glottographic Grapheme</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Glottographic_Grapheme</rdfs:label>
     </owl:Class>
     
 
@@ -308,7 +310,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
         <rdfs:comment xml:lang="en">A grapheme that is part of a word (or morpheme). These graphemes correspond to the second articulation of language. Though they normally belong to &apos;phonographic&apos; writing systems (G. Sampson, Writing Systems, pp. 39-45 distinguishes three kinds of phonographic systems: syllabic, segmental and featural), I want to hightlight that one intraverbal grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. There relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include diacritics, abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Intraverbal Grapheme</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Intraverbal_Grapheme</rdfs:label>
     </owl:Class>
     
 
@@ -316,7 +318,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <!-- https://graphematics.vedph.it/graphematics#Ligature -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Ligature">
-        <rdfs:label xml:lang="en">VeDPH Ligature</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Ligature</rdfs:label>
     </owl:Class>
     
 
@@ -326,7 +328,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Logograph">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
         <rdfs:comment>A Grapheme meaning a whole word or a morpheme. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39. It is worth quoting from page 39: &quot;[...] one might imagine a logographic script for English in which, say, the words walk, walked, walking were represented by three distinct and unrelted graphs, rather than being split into their constituent morphemes [...]. In reality, though, I know of no logographic systems based on units larger than single morphemes&quot;. Bear in mind that word roots (e.g. &quot;dog&quot;) also are &quot;morphemes&quot;.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Logograph</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Logograph</rdfs:label>
     </owl:Class>
     
 
@@ -336,7 +338,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Metamark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
         <rdfs:comment>This class includes textual graphemes that do not qualify as space or punctuation, such as an asterisk pointing to a footnote, a mark in a manuscript pointing to an interlinear or a marginal addition. This class might be eliminated in future versions of the ontology, since it mostly represents &apos;other textual graphemes&apos; (not being space or proper punctuation). However, such metamarks have specific markup conventions in TEI.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Metamark</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Metamark</rdfs:label>
     </owl:Class>
     
 
@@ -346,7 +348,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_Mark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
         <rdfs:comment>Examples include comma, full stop, question mark, quotes. Especially in pre-modern writing systems, the status of some textual graphemes (such as asterisks or the obelos in ancient Greek papyri) is controversial: some would call them punctuation, some not. So the distinction between current classes &quot;Punctuation Mark&quot; and &quot;Metamark&quot; is blurred in practice. In other words, punctuation has been standardized for Western writing systems only in the contemporary age, and its status in other writing systems is still problematic.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Punctuation Mark</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Punctuation_Mark</rdfs:label>
     </owl:Class>
     
 
@@ -356,7 +358,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Semasiographic_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment>A Grapheme meaning an idea, not a word. The name and the concept are taken from G. Sampson, Writing Systems, pp. 28-38. This covers the concept sometimes called ideogram or pictogram. Examples include numbers and Chinese characters.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Semasiographic Grapheme</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Semasiographic_Grapheme</rdfs:label>
     </owl:Class>
     
 
@@ -366,7 +368,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Space">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
         <rdfs:comment>Examples include &apos;white&apos; space between graphical words and other uses of space to arrange marks on the page, such as line breaks. In a written document produced with ink &quot;Space&quot; is not produced directly by adding ink, but instead by arranging other marks in a specific way, so one could argue that &quot;Space&quot; is not a subclass of &quot;Mark&quot;, but I would still argue that it is a subclass of &quot;Grapheme&quot; because it has distinctive value. Its status is therefore quite unique and problematic.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Space</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Space</rdfs:label>
     </owl:Class>
     
 
@@ -376,7 +378,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Textual_Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment>A Grapheme used as a metalanguage providing a meaningful syntax for other graphemes in the text. It does not distinguish between different words but between different texts.</rdfs:comment>
-        <rdfs:label xml:lang="en">VeDPH Textual Grapheme</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Textual_Grapheme</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
