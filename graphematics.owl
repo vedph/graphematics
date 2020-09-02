@@ -158,7 +158,7 @@ So when this ontology asserts that TX9 Glyph (a E24 Physical Human-Made Thing), 
     <!-- https://graphematics.vedph.it/graphematics#Abbreviation_Mark -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation_Mark">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
         <rdfs:comment xml:lang="en">Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
 Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
@@ -214,7 +214,7 @@ Open issue: strictly speaking, the term &apos;Allograph&apos; should only be use
     <!-- https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning"/>
@@ -248,7 +248,7 @@ Examples include: &apos;a&apos;, &apos;b&apos;, &apos;c&apos;... for graphemes r
     <!-- https://graphematics.vedph.it/graphematics#Brevigraph -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Brevigraph">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning"/>
@@ -280,7 +280,7 @@ Problematic aspect: brevigraphs mostly derive from original graphemes (&apos;p&a
     <!-- https://graphematics.vedph.it/graphematics#Diacritic -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Diacritic">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme"/>
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
         <rdfs:comment xml:lang="en">Property -{alphabetic}, i.e. doesn&apos;t have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
 Properties:
@@ -311,12 +311,12 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     
 
 
-    <!-- https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme -->
+    <!-- https://graphematics.vedph.it/graphematics#Segmental_Grapheme -->
 
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Intraverbal_Grapheme">
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Segmental_Grapheme">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
         <rdfs:comment xml:lang="en">A grapheme that is part of a word (or morpheme). These graphemes correspond to the second articulation of language. Though they normally belong to &apos;phonographic&apos; writing systems (G. Sampson, Writing Systems, pp. 39-45 distinguishes three kinds of phonographic systems: syllabic, segmental and featural), I want to hightlight that one intraverbal grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. There relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include diacritics, abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
-        <rdfs:label xml:lang="en">POGO_Intraverbal_Grapheme</rdfs:label>
+        <rdfs:label xml:lang="en">POGO_Segmental_Grapheme</rdfs:label>
     </owl:Class>
     
 
