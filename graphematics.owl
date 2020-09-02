@@ -129,7 +129,7 @@ Three closely related ontologies, to which this ontology will eventually be inte
     <!-- http://www.cidoc-crm.org/crmtex/TX9_Glyph -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/crmtex/TX9_Glyph">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E37_Mark"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item"/>
