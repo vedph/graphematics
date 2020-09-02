@@ -129,6 +129,7 @@ Three closely related ontologies, to which this ontology will eventually be inte
     <!-- http://www.cidoc-crm.org/crmtex/TX9_Glyph -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/crmtex/TX9_Glyph">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item"/>
@@ -148,6 +149,7 @@ So when this ontology asserts that TX9 Glyph (a E24 Physical Human-Made Thing), 
     <!-- https://graphematics.vedph.it/graphematics#Abbreviation -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:label xml:lang="en">POGO_Abbreviation</rdfs:label>
     </owl:Class>
     
@@ -322,6 +324,7 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     <!-- https://graphematics.vedph.it/graphematics#Ligature -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Ligature">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:label xml:lang="en">POGO_Ligature</rdfs:label>
     </owl:Class>
     
