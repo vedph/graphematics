@@ -295,7 +295,7 @@ Its distinction with textual graphemes, and possibly also with abbreviation mark
 
 A diacritic dffers from graphemes having +{alphabetic} such as the abbreviation mark because, for instance, we do not consider the &apos;o&apos; in Italian words &apos;pero&apos; and &apos;però&apos; as distinct alphabemes, while the alphabeme sequences in &apos;lacu&apos; (ablative) and &apos;lacū&apos; (abbreviation for accusative &apos;lacum&apos;) do differ because of the macron (abbreviation mark).
 
-The main distinction between a diacritic and a textual graphemes is that a diacritic is considered as part of one word, referring to the whole word or to individual graphemes within it, while a textual grapheme like a comma does not refer to one word, but has function to a number of words, and in principle has function to the whole text.</rdfs:comment>
+The main distinction between a POGO_Diacritic and a POGO_Textual Grapheme is that a POGO_Diacritic is considered as part of one word, referring to the whole word or to individual graphemes within it, while a POGO_Textual Grapheme like a comma does not refer to one word, but has function to a number of words, and in principle has function to the whole text.</rdfs:comment>
         <rdfs:label xml:lang="en">POGO_Diacritic</rdfs:label>
     </owl:Class>
     
@@ -307,16 +307,6 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/crmtex/TX8_Grapheme"/>
         <rdfs:comment xml:lang="en">A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
         <rdfs:label xml:lang="en">POGO_Glottographic_Grapheme</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://graphematics.vedph.it/graphematics#Segmental_Grapheme -->
-
-    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Segmental_Grapheme">
-        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
-        <rdfs:comment xml:lang="en">A grapheme that is part of a word (or morpheme). These graphemes correspond to the second articulation of language. Though they normally belong to &apos;phonographic&apos; writing systems (G. Sampson, Writing Systems, pp. 39-45 distinguishes three kinds of phonographic systems: syllabic, segmental and featural), I want to hightlight that one intraverbal grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. There relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include diacritics, abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
-        <rdfs:label xml:lang="en">POGO_Segmental_Grapheme</rdfs:label>
     </owl:Class>
     
 
@@ -350,12 +340,51 @@ The main distinction between a diacritic and a textual graphemes is that a diacr
     
 
 
+    <!-- https://graphematics.vedph.it/graphematics#POGO_Featural_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#POGO_Featural_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">Vd. G. Sampson, Writing Systems, pp. 40-42.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Featural_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">G. Sampson, Writing Systems, pp. 39-42 distinguishes three kinds of &apos;phonographic&apos; systems: &apos;syllabic&apos;, &apos;segmental&apos; and &apos;featural&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Phonographic_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#POGO_Syllabic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#POGO_Syllabic_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">Vd. G. Sampson, Writing Systems, pp. 39-40.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://graphematics.vedph.it/graphematics#Punctuation_Mark -->
 
     <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_Mark">
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
         <rdfs:comment>Examples include comma, full stop, question mark, quotes. Especially in pre-modern writing systems, the status of some textual graphemes (such as asterisks or the obelos in ancient Greek papyri) is controversial: some would call them punctuation, some not. So the distinction between current classes &quot;Punctuation Mark&quot; and &quot;Metamark&quot; is blurred in practice. In other words, punctuation has been standardized for Western writing systems only in the contemporary age, and its status in other writing systems is still problematic.</rdfs:comment>
         <rdfs:label xml:lang="en">POGO_Punctuation_Mark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Segmental_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Segmental_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">This class of graphemes correspond to the second articulation of language: vd. G. Sampson, Writing Systems, pp. 39-40. It is important to hightlight that one segmental grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. Their relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Segmental_Grapheme</rdfs:label>
     </owl:Class>
     
 
