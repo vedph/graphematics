@@ -1,6 +1,7 @@
 # POGO (Philology-Oriented Graphematics Ontology)
 
-Graphematics ontology oriented towards philology based on documents (such as European and Middle Eastern medieval manuscripts, inscriptions, papyri) created with pre-modern handwritten writing systems.
+
+An ontology including key concepts of graphematics (such as Grapheme, Allograph, Glyph). It is oriented towards digital philology based on the transcription documents (such as European and Middle Eastern medieval manuscripts, inscriptions, papyri) based with pre-modern handwritten writing systems.
 
 This ontology is **work in progress**: it is being actively developed as of summer 2020 by [Paolo Monella](http://www1.unipa.it/paolo.monella/) at the [VeDPH](https://unive.it/vedph), Venice Centre for Digital and Publich Humanities, at the Ca' Foscari University of Venice, Italy.
 
