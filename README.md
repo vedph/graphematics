@@ -7,8 +7,8 @@ This ontology is **work in progress**: it is being actively developed as of summ
 
 The ontology is anchored to concepts
 
-- [TX8 Grapheme](http://www.cidoc-crm.org/crmtex/TX8_Grapheme)
-- [TX9 Glyph](http://www.cidoc-crm.org/crmtex/TX9_Glyph)
+- [TX8 Grapheme](http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme)
+- [TX9 Glyph](http://www.cidoc-crm.org/extensions/crmtex/TX9_Glyph)
 
 of the [CRMtex](http://www.cidoc-crm.org/crmtex/sites/default/files/CRMtex_v1.0_March_2020.pdf) ontology version 1.0, of which it constitutes an expansion.
 
