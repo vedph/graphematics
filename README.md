@@ -1,7 +1,7 @@
 # POGO (Philology-Oriented Graphematics Ontology)
 
 
-An ontology including key concepts of graphematics (such as Grapheme, Allograph, Glyph, Brevigraph). It is oriented towards digital philology, and particularly towards the diplomatic transcription of textual documents (such as European and Near Eastern medieval manuscripts, inscriptions, papyri) written with pre-modern handwritten writing systems.
+An ontology including key concepts of graphematics (such as Grapheme, Allograph, Glyph, Brevigraph etc.). It is oriented towards digital philology: it includes the concepts/objects that a philologist needs to create a digital diplomatic transcription of a textual document (such as European and Near Eastern medieval manuscripts, inscriptions, papyri) written with pre-modern handwritten writing systems.
 
 This ontology is **work in progress**: it is being actively developed as of summer 2020 by [Paolo Monella](http://www1.unipa.it/paolo.monella/) at the [VeDPH](https://unive.it/vedph), Venice Centre for Digital and Publich Humanities, at the Ca' Foscari University of Venice, Italy.
 
@@ -15,3 +15,5 @@ of the [CRMtex](http://www.cidoc-crm.org/crmtex/sites/default/files/CRMtex_v1.0_
 Two closely related ontologies, to which this ontology is also connected (mostly by means of `owl:equivalentClass`) are:
 - Peter Stokes, [The Archetype Ontology](https://github.com/pastokes/archetype-ontology)
 - Frekerike Neuber, [typoo](https://github.com/FrederikeNeuber/typoo/)
+
+A presentation of POGO is here: <https://doi.org/10.5281/zenodo.10355605>
