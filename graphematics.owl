@@ -161,7 +161,7 @@ So when this ontology asserts that TX9 Glyph (a E24 Physical Human-Made Thing), 
         <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
         <rdfs:comment xml:lang="en">Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
-Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
+Property -{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is no one Alphabeme (not Phoneme) of which it represents the standard alphabetic meaning.
 
 Properties:
 {+linguistic}
@@ -224,7 +224,7 @@ Open issue: strictly speaking, the term &apos;Allograph&apos; should only be use
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
-Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) which it represents its standard alphabetic meaning.
 
 Problematic aspect: some Alphabetic Graphemes (that I would call &apos;Combining Alphabetic Graphemes&apos;) can be put above or below another Alphabetic Grapheme, or &apos;Base Alphabetic Grapheme&apos; (e.g. a small &apos;o&apos; over an &apos;u&apos; or, in Greek, a small iota under an omega), thus being used as abbreviations. The same happens today in superscript such as 1st or 2nd in English, or 1° in Italian (for &apos;primo&apos;).
 
@@ -260,7 +260,7 @@ Examples include: &apos;a&apos;, &apos;b&apos;, &apos;c&apos;... for graphemes r
 
 Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
 
-Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) wich it represents its standard alphabetic meaning.
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) which it represents its standard alphabetic meaning.
 
 Properties:
 {+linguistic}
