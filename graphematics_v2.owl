@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ilbuonme/ontologies/2020/6/graphematics#"
+     xml:base="http://www.semanticweb.org/ilbuonme/ontologies/2020/6/graphematics"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://graphematics.vedph.it/graphematics">
+        <owl:versionIRI rdf:resource="https://graphematics.vedph.it/graphematics/2.0.0"/>
+        <rdfs:comment xml:lang="en">Ontology for concepts pertaining to graphemes and writing systems, oriented to philology, version 2.0.
+
+This is still work in progress. While version 1.0 was developed in summer 2020, version 2.0 was developed in summer 2025. The present version and is intertwined with Peter Stokes&apos; The Archetype Ontology.
+
+Three closely related ontologies are:
+
+- Peter Stokes, [The Archetype Ontology](https://github.com/pastokes/archetype-ontology)
+- [CRMtex](http://www.cidoc-crm.org/crmtex/sites/default/files/CRMtex_v1.0_March_2020.pdf)
+- Frekerike Neuber, [typoo](https://github.com/FrederikeNeuber/typoo/).
+
+This ontology is licensed under a Creative Commons Attribution 4.0 International License (CC-BY 4.0).
+This ontology is based on the CIDOC CRM &lt;https://cidoc-crm.org/&gt; and its extension CRMtex (version 2.0) &lt;https://cidoc-crm.org/extensions/crmtex/html/CRMtex_v2.0.html&gt;.</rdfs:comment>
+        <rdfs:label>POGO, Philology-oriented graphematics ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/P138_represents -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138_represents">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P138i_is_represented_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P138i_is_represented_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138i_is_represented_by"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P148_has_component -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P148_has_component"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P65i_is_shown_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P65i_is_shown_by">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity#P65_shows_visual_item"/>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning -->
+
+    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning">
+        <owl:inverseOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_is_standard_alphabetic_meaning_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#POGO_is_standard_alphabetic_meaning_of -->
+
+    <owl:ObjectProperty rdf:about="https://graphematics.vedph.it/graphematics#POGO_is_standard_alphabetic_meaning_of"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://archetype.ink/current/Generalised_Allograph -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/Generalised_Allograph">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E37_Mark"/>
+    </owl:Class>
+    
+
+
+    <!-- http://archetype.ink/current/arch_Allograph -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Allograph">
+        <rdfs:subClassOf rdf:resource="http://archetype.ink/current/Generalised_Allograph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://archetype.ink/current/arch_Character -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Character">
+        <rdfs:subClassOf rdf:resource="http://archetype.ink/current/Generalised_Allograph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://archetype.ink/current/arch_Graph -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Graph">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmtex/TX9_Glyph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://archetype.ink/current/arch_Idiograph -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Idiograph">
+        <rdfs:subClassOf rdf:resource="http://archetype.ink/current/Generalised_Allograph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://archetype.ink/current/arch_Ontograph -->
+
+    <owl:Class rdf:about="http://archetype.ink/current/arch_Ontograph">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E24_Physical_Human-Made_Thing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E24_Physical_Human-Made_Thing">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E71_Human-Made_Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E25_Human-Made_Feature -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E25_Human-Made_Feature">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E24_Physical_Human-Made_Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E37_Mark -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E37_Mark">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E71_Human-Made_Thing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E71_Human-Made_Thing"/>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E90_Symbolic_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme">
+        <rdfs:subClassOf rdf:resource="http://archetype.ink/current/arch_Ontograph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/extensions/crmtex/TX9_Glyph -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/extensions/crmtex/TX9_Glyph">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E25_Human-Made_Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Abbreviation -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P148_has_component"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A combination of two or more graphemes (TX8_Grapheme) that has two or more alphabemes (POGO_Alphabeme) as alphabetic meaning, and in which (as opposed to a POGO_Ligature) graphemes do not have a 1:1 alphabetic meaning. Instead, the alphabetic meaning of the whole abbreviation results from the combination of its component graphemes.
+
+In medieval European writing systems, the graphemes commonly composing an abbreviation are alphabetic graphemes (POGO_Alphabetic_Grapheme; e.g. a Latin &apos;v&apos; surrounded by a Latin &apos;o&apos; as an abbreviation for &apos;vero&apos;); or, more often, one or more alphabetic graphemes combined with one ore more abbreviation marks (POGO_Abbreviation_Mark; e.g. Latin &apos;q;&apos; for &apos;quia&apos;, or modern &apos;dr.&apos; for &apos;doctor&apos;). A POGO_Abbreviation is distinct from a POGO_Brevigraph because the former is a combination of graphemes, while the latter is one grapheme.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Abbreviation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Abbreviation_Mark -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Abbreviation_Mark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
+        <rdfs:comment xml:lang="en">Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Property -{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is no one Alphabeme (not Phoneme) of which it represents the standard alphabetic meaning.
+
+Properties:
+{+linguistic}
+{+intraverbal}
+{+alphabetic}
+{-has_a_1_to_1_standard_alphabetic_meaning}
+{+combining}
+
+Examples: macron, semicolon, dot and other graphemes written to mark an abbreviation.
+
+Example of property {+alphabetic}: in &apos;mīa&apos; (abbreviated form for &apos;misericordia&apos;), the four grahemes &apos;m&apos;, &apos;i&apos;, &apos;a&apos; and macron (which can span over the whole graphical word or over a part of it), combined, have function to the alphabemes &apos;m&apos;, &apos;i&apos;, &apos;s&apos;, &apos;e&apos; etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Abbreviation_Mark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Alphabeme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabeme">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdfs:comment>Minimal distinctive unit of an alphabet. It does not have a shape model and may be represented by a grapheme, by a signal of the Morse code, by a sequence of phonemes, by a sign in the deaf sign language etc. It relationship with the Phoneme is complex and variable.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Alphabeme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Alphabetic_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Alphabeme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) which it represents its standard alphabetic meaning.
+
+Problematic aspect: some Alphabetic Graphemes (that I would call &apos;Combining Alphabetic Graphemes&apos;) can be put above or below another Alphabetic Grapheme, or &apos;Base Alphabetic Grapheme&apos; (e.g. a small &apos;o&apos; over an &apos;u&apos; or, in Greek, a small iota under an omega), thus being used as abbreviations. The same happens today in superscript such as 1st or 2nd in English, or 1° in Italian (for &apos;primo&apos;).
+
+Properties:
+{+linguistic}
+{+intraverbal}
+{+alphabetic}
+
+Base Alphabetic Graphemes also have properties:
+{-combining}
+
+Combining Alphabetic Graphemes also have properties:
+{+combining}
+
+Examples include: &apos;a&apos;, &apos;b&apos;, &apos;c&apos;... for graphemes referring to alphabemes of the Latin alphabet; alpha, beta, gamma... for those referring to the Greek alphabet.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Alphabetic_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Brevigraph -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Brevigraph">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://graphematics.vedph.it/graphematics#POGO_has_standard_alphabetic_meaning"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://graphematics.vedph.it/graphematics#Alphabeme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">One Grapheme meaning more than one Alphabeme.
+
+Property +{alphabetic}, i.e. does have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Property +{has_a_1_to_1_standard_alphabetic_meaning}, i.e. there is one Alphabeme (not Phoneme) which it represents its standard alphabetic meaning.
+
+Properties:
+{+linguistic}
+{+intraverbal}
+{+alphabetic}
+{-has_a_1_to_1_standard_alphabetic_meaning}
+{-combining}
+
+Examples include: p with horizontal trait for Latin &quot;per&quot;, q with horizontal trait for lat. &quot;qui&quot; etc.
+
+Problematic aspect: brevigraphs mostly derive from original graphemes (&apos;p&apos;, &apos;q&apos;, &apos;e&apos; etc.) with modifications. In some cases, such as the &apos;e caudatum&apos; (originating from a ligature between &apos;a&apos; and &apos;e&apos;) or the &apos;4-shaped&apos; abbreviation for final &apos;-rum&apos; in Latin (bonorum etc.), the original graphemes have fused in such a manner that one would hardly distinguish them any more. In other cases, instead, the original traits are easily distinguishable, so one could analyze &apos;p with horizontal trait&apos; as two distinct graphemes, &apos;p&apos; and &apos;horizontal trait&apos;. This relates to the very issue of the definition of grapheme as &apos;minimal&apos; unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Brevigraph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Diacritic -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Diacritic">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Segmental_Grapheme"/>
+        <rdfs:comment xml:lang="en">Property -{alphabetic}, i.e. doesn&apos;t have function to [Alphabeme]+ (1 or more [Alphabeme]).
+
+Properties:
+{+linguistic}
+{+intraverbal}
+{-alphabetic}
+{+combining}
+
+Examples include: accent, macron meaning long vowel.
+
+Its distinction with textual graphemes, and possibly also with abbreviation marks, may be blurred in practice.
+
+A diacritic dffers from graphemes having +{alphabetic} such as the abbreviation mark because, for instance, we do not consider the &apos;o&apos; in Italian words &apos;pero&apos; and &apos;però&apos; as distinct alphabemes, while the alphabeme sequences in &apos;lacu&apos; (ablative) and &apos;lacū&apos; (abbreviation for accusative &apos;lacum&apos;) do differ because of the macron (abbreviation mark).
+
+The main distinction between a POGO_Diacritic and a POGO_Textual Grapheme is that a POGO_Diacritic is considered as part of one word, referring to the whole word or to individual graphemes within it, while a POGO_Textual Grapheme like a comma does not refer to one word, but has function to a number of words, and in principle has function to the whole text.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Diacritic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Glottographic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme"/>
+        <rdfs:comment xml:lang="en">A Grapheme meaning a word or a part of it. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Glottographic_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Ligature -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Ligature">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P148_has_component"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A combination of two or more graphemes (TX8_Grapheme) in which, while the corresponding graphs (as in arch_Graph) are physically joined or intertwined, each component graph keeps its identity and ultimately (i.e. throught one or more members of the Generalised_Allograph chain) represents its own grapheme directly (i.e. with a 1:1 correspondence) and indipendently from the other component graphs (as opposed to a POGO_Abbreviation).</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Ligature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Logograph -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Logograph">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
+        <rdfs:comment>A Grapheme meaning a whole word or a morpheme. The name and the concept are taken from G. Sampson, Writing Systems, pp. 38-39. It is worth quoting from page 39: &quot;[...] one might imagine a logographic script for English in which, say, the words walk, walked, walking were represented by three distinct and unrelted graphs, rather than being split into their constituent morphemes [...]. In reality, though, I know of no logographic systems based on units larger than single morphemes&quot;. Bear in mind that word roots (e.g. &quot;dog&quot;) also are &quot;morphemes&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Logograph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Metamark -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Metamark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+        <rdfs:comment>This class includes textual graphemes that do not qualify as space or punctuation, such as an asterisk pointing to a footnote, a mark in a manuscript pointing to an interlinear or a marginal addition. This class might be eliminated in future versions of the ontology, since it mostly represents &apos;other textual graphemes&apos; (not being space or proper punctuation). However, such metamarks have specific markup conventions in TEI.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Metamark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#POGO_Featural_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#POGO_Featural_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">Vd. G. Sampson, Writing Systems, pp. 40-42.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Featural_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Glottographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">G. Sampson, Writing Systems, pp. 39-42 distinguishes three kinds of &apos;phonographic&apos; systems: &apos;syllabic&apos;, &apos;segmental&apos; and &apos;featural&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Phonographic_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#POGO_Syllabic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#POGO_Syllabic_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">Vd. G. Sampson, Writing Systems, pp. 39-40.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Punctuation_Mark -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Punctuation_Mark">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+        <rdfs:comment>Examples include comma, full stop, question mark, quotes. Especially in pre-modern writing systems, the status of some textual graphemes (such as asterisks or the obelos in ancient Greek papyri) is controversial: some would call them punctuation, some not. So the distinction between current classes &quot;Punctuation Mark&quot; and &quot;Metamark&quot; is blurred in practice. In other words, punctuation has been standardized for Western writing systems only in the contemporary age, and its status in other writing systems is still problematic.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Punctuation_Mark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Segmental_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Segmental_Grapheme">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#POGO_Phonographic_Grapheme"/>
+        <rdfs:comment xml:lang="en">This class of graphemes correspond to the second articulation of language: vd. G. Sampson, Writing Systems, pp. 39-40. It is important to hightlight that one segmental grapheme does not necessarily represent one phoneme. Writing systems are independent semiotic systems, constituting a &apos;manifestation&apos; of the abstract structures of the language (Hjelmslev, Prolegomena to a Theory of Language, chapter 21, &apos;Language and non-language&apos;) distinct from the &apos;manifestation&apos; of those structures represented by spoken language. Their relationship between intraverbal graphemes and phonemes is complex: examples  of this complexity include abbreviation marks and brevigraphs, but also an alphabetic grapheme such as &apos;h&apos;, to which no phoneme corresponds in the pronunciation in some languages (like Italian); and another alphabetic grapheme such as &apos;c&apos;, to which many pronunciations corresponded in Latin throughout social classes, time and space.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Segmental_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Semasiographic_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Semasiographic_Grapheme">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme"/>
+        <rdfs:comment>A Grapheme meaning an idea, not a word. The name and the concept are taken from G. Sampson, Writing Systems, pp. 28-38. This covers the concept sometimes called ideogram or pictogram. Examples include numbers and Chinese characters.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Semasiographic_Grapheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Space -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Space">
+        <rdfs:subClassOf rdf:resource="https://graphematics.vedph.it/graphematics#Textual_Grapheme"/>
+        <rdfs:comment>Examples include &apos;white&apos; space between graphical words and other uses of space to arrange marks on the page, such as line breaks. In a written document produced with ink &quot;Space&quot; is not produced directly by adding ink, but instead by arranging other marks in a specific way, so one could argue that &quot;Space&quot; is not a subclass of &quot;Mark&quot;, but I would still argue that it is a subclass of &quot;Grapheme&quot; because it has distinctive value. Its status is therefore quite unique and problematic.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://graphematics.vedph.it/graphematics#Textual_Grapheme -->
+
+    <owl:Class rdf:about="https://graphematics.vedph.it/graphematics#Textual_Grapheme">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/extensions/crmtex/TX8_Grapheme"/>
+        <rdfs:comment>A Grapheme used as a metalanguage providing a meaningful syntax for other graphemes in the text. It does not distinguish between different words but between different texts.</rdfs:comment>
+        <rdfs:label xml:lang="en">POGO_Textual_Grapheme</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
